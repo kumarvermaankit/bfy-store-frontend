@@ -9,7 +9,6 @@ import { CheckCircleSolid, CreditCard } from "@medusajs/icons"
 import { Button, Container, Heading, Select, Text, Tooltip, clx } from "@medusajs/ui"
 import { CardElement } from "@stripe/react-stripe-js"
 import { StripeCardElementOptions } from "@stripe/stripe-js"
-
 import Divider from "@modules/common/components/divider"
 import Spinner from "@modules/common/icons/spinner"
 import PaymentContainer from "@modules/checkout/components/payment-container"
@@ -101,11 +100,11 @@ const Payment = ({
     {value:"cod", label:"COD"}
   ]
   const [paymentMethod, setPayMethod] = useState("");
-  console.log(paymentMethod);
+  console.log(cart?.payment_sessions);
 
   return (
     <div className="bg-white">
-      {/* <div className="flex flex-row items-center justify-between mb-6">
+      <div className="flex flex-row items-center justify-between mb-6">
         <Heading
           level="h2"
           className={clx(
@@ -233,45 +232,7 @@ const Payment = ({
           )}
         </div>
       </div>
-      <Divider className="mt-8" /> */}
-<Select
-  onValueChange={(val)=> {
-    set(val);
-    setPayMethod(val)}}
-  value={paymentMethod}
->
-
-<Select.Trigger>
-
-  <Select.Value placeholder="Placeholder" />
-
-</Select.Trigger>
-
-<Select.Content>
-
-  {paymentOption.map((item) => (
-
-    <Select.Item key={item.value} value={item.value}>
-
-      {item.label}
-
-    </Select.Item>
-
-  ))}
-
-</Select.Content>
-
-</Select>
-
-{paymentReady && <Button
-  size="large"
-  className="mt-6"
-  onClick={handleSubmit}
-  isLoading={isLoading}
-  disabled={(isStripe && !cardComplete) || !cart.payment_session}
->
-  Continue to review
-</Button>}
+      <Divider className="mt-8" />
     </div>
   )
 }
