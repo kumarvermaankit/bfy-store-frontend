@@ -6,9 +6,9 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 
 export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
+  title: "bfy",
   description:
-    "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
+    "A store for your tshirt needs",
 }
 
 const getCollectionsWithProducts = async () => {
