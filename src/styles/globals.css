@@ -112,8 +112,9 @@
 }
 
 .bg-image{
-  background: url("/hero.webp") no-repeat 50% scroll;
-  background-size: cover;
+  background: url("/bg-blue.jpeg") no-repeat 50% scroll;
+  background-size: contain;
+  background-repeat: repeat;
 }
 .hero-bg{
   background: hsla(0,0%,97%,.749);

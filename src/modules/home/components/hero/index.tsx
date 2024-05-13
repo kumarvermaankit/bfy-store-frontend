@@ -10,14 +10,13 @@ const Hero = () => {
             level="h1"
             className="text-3xl leading-10 text-ui-fg-base font-normal"
           >
-            Buy For You
+           Buy For You
           </Heading>
           <Heading
             level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
+            className="text-3xl leading-10 text-ui-fg-subtle font-normal pt-[10px]"
           >
-          Express Yourself in Style: Where Every Thread Tells a Story!
-          </Heading>
+          Replenish Your Wellness: Embrace Self-Care with Every Selection. </Heading>
         </span>
         <a
           href="/store"

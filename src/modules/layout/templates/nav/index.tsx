@@ -5,6 +5,7 @@ import { Suspense } from "react"
 import { listRegions } from "@lib/data"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import Image from "next/image"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
@@ -26,7 +27,7 @@ export default async function Nav() {
               href="/"
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
             >
-              BuyForYou
+               <div className="flex items-center"><Image src="/bfy.png" width={50} height={50} alt="" />   <p>BuyForYou</p></div>
             </Link>
           </div>
 

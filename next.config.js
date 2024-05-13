@@ -1,6 +1,5 @@
 const { withStoreConfig } = require("./store-config")
 const store = require("./store.config.json")
-
 /**
  * @type {import('next').NextConfig}
  */
@@ -31,7 +30,7 @@ const nextConfig = withStoreConfig({
       },
     ],
     domains:[
-      process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+      process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL || "http://localhost:8000"
     ]
   },
 })
