@@ -26,7 +26,7 @@ const nextConfig = withStoreConfig({
       },
       {
         protocol: "https",
-        hostname: "https://psychiatric-charity-akv-7597c875.koyeb.app",
+        hostname: "psychiatric-charity-akv-7597c875.koyeb.app",
       },
     ],
     domains:[
