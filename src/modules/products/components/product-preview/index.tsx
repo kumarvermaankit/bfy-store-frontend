@@ -15,6 +15,7 @@ export default async function ProductPreview({
   price,
   isFeatured,
 }: ProductPreviewType) {
+  // console.log({ id, title, handle, thumbnail, price, isFeatured})
   return (
     <Link href={`/products/${handle}`} className="group">
       <div>
