@@ -17,19 +17,21 @@ type ProductTemplateProps = {
 const ProductTemplate: React.FC<ProductTemplateProps> = ({ product }) => {
   return (
     <>
-      <div className="content-container flex flex-col small:flex-row small:items-start py-6 relative">
-        <div className="flex flex-col small:sticky small:top-48 small:py-0 small:max-w-[300px] w-full py-8 gap-y-6">
-          <ProductInfo product={product} />
-          <ProductTabs product={product} />
-        </div>
+      <div className="content-container flex flex-col small:flex-row gap-2 small:items-start py-6 relative">
+      <div className="flex flex-col gap-2 items-center w-full">
         <div className="block w-full relative">
           <ImageGallery images={product?.images || []} />
         </div>
-        <div className="flex flex-col small:sticky small:top-48 small:py-0 small:max-w-[300px] w-full py-8 gap-y-12">
+        <div className="flex flex-col small:sticky small:top-48 small:py-0 w-full py-8 small:px-14 gap-y-12">
           <ProductOnboardingCta />
           <Suspense fallback={<SkeletonProductActions product={product} />}>
             <ProductActions product={product} />
           </Suspense>
+        </div>
+        </div>
+        <div className="flex flex-col small:sticky small:top-48 small:py-0 w-full py-8 gap-y-6">
+          <ProductInfo product={product} />
+          <ProductTabs product={product} />
         </div>
       </div>
       <div className="content-container my-16 small:my-32">

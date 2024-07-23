@@ -10,7 +10,7 @@ type ProductInfoProps = {
 const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
   return (
     <div id="product-info">
-      <div className="flex flex-col gap-y-4 lg:max-w-[500px] mx-auto">
+      <div className="flex flex-col gap-y-4 lg:max-w-[500px]">
         {product.collection && (
           <Link
             href={`/collections/${product.collection.handle}`}
@@ -23,7 +23,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
           {product.title}
         </Heading>
 
-        <Text className="text-medium text-ui-fg-subtle">
+        <Text className="text-medium text-ui-fg-subtle" style={{whiteSpace: "pre-line"}}>
           {product.description}
         </Text>
       </div>
