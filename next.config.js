@@ -26,7 +26,7 @@ const nextConfig = withStoreConfig({
       },
       {
         protocol: "https",
-        hostname: "psychiatric-charity-akv-7597c875.koyeb.app",
+        hostname: "https://sexual-haleigh-akv-35db5edd.koyeb.app/",
       },
     ],
     domains:[
